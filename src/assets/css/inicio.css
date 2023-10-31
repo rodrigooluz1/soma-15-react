@@ -1,0 +1,37 @@
+.box-content{
+    background-color: #ffffff;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: solid 2px #182242;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.box-content p{
+    font-family: arial;
+    font-size: 18px;
+    margin: 20px 0 20px 0;
+}
+
+.box-content .logo{
+    width: 250px;
+}
+
+.box-content .btn-jogar{
+    background-color: green;
+    border: 0;
+    border-radius: 12px;
+    height: 50px;
+    width: 250px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Verdana;
+}
+
+.box-content .btn-jogar:hover{
+    background-color: rgb(17, 206, 17);
+}

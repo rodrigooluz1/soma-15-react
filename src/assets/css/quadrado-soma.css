@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.tabuleiro{
+    width: 22em;
+    height: 22.0em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+.tabuleiro .itemNumero{
+    background-color: #6072ac;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.4em;
+    padding: 0.7em;
+    text-align: center;  
+    border-radius: 0.2em; 
+    width: 2.8em; 
+    height: 2.8em;
+    cursor: pointer;    
+}
+
+.itemNumero:hover{
+    background-color: #7282b8;
+    border: 0.1em solid #e9df56;
+    width: 2.8em;
+    height: 2.8em;
+}
+
+.selected{
+    background-color: #7282b8;
+    border: 0.1em solid #e9df56;
+    width: 3.2em;
+    height: 3.2em;
+}
+
+.btnSairArea{
+    width: 100%;
+    text-align: center;
+    margin: 40px 0 20px 0;
+}
+
+.btnSairArea .btnSair{   
+    border: 0;
+    border-radius: 12px;
+    height: 50px;
+    width: 150px;
+    color: #ffffff;
+    background-color: rgb(245, 75, 75);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Verdana;
+    margin-bottom: 10px;
+}
+
+.btnSairArea .btnSair:hover{
+    background-color: red;
+}
+
+
+@media(min-width:800px){
+
+    .tabuleiro{
+        width: 42.0em;
+        height: 42.0em;
+    }
+    
+    .tabuleiro .itemNumero{        
+        font-size: 4.0em;
+        padding: 1.0em;       
+        width: 3.2em; 
+        height: 3.2em;   
+    }
+    
+    .itemNumero:hover{        
+        width: 3.2em;
+        height: 3.2em;
+    }
+    
+    .selected{        
+        width: 3.2em;
+        height: 3.2em;
+    }
+    
+}
+
