@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import '../assets/css/quadrado-soma.css'
 import { Cronometro } from './cronometro'
 import Final from './final';
-import Encerrar from './encerrar';
 
 export function QuadradoSoma(){
 
@@ -112,32 +111,18 @@ export function QuadradoSoma(){
             diagonal2 = diagonal2 + item.value
         })
 
-
-        console.log(`soma linha 1 = ${linha1}`)
-        console.log(`soma linha 2 = ${linha2}`)
-        console.log(`soma linha 3 = ${linha3}`)
-
-        console.log(`soma coluna 1 = ${coluna1}`)
-        console.log(`soma coluna 2 = ${coluna2}`)
-        console.log(`soma coluna 3 = ${coluna3}`)
-        
-        console.log(`soma diagonal 1 = ${diagonal1}`)
-        console.log(`soma diagonal 2 = ${diagonal2}`)
-
-
         if(linha1 === 15 && linha2 === 15 && linha3 === 15 && coluna1 === 15 && coluna2 === 15 && coluna3 === 15 && diagonal1 === 15 && diagonal2=== 15){
             await setFinalizouSoma(true);            
         }
-
         
       }
 
        return (
         <>
 
-            {finalizouSoma && <Final />}
+            {finalizouSoma && <Final IsGameOver={false}/>}
 
-            {(encerrarJogo || timeIsOver) && <Encerrar />}
+            {(encerrarJogo || timeIsOver) && <Final IsGameOver={true} />}
 
             <Cronometro paraCronometro={finalizouSoma || encerrarJogo} limite={tempoLimite} statusTimeIsOver={verificaTimeIsOver} />
         

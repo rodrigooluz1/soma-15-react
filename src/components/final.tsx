@@ -2,8 +2,9 @@
 import { Navigate, useNavigate } from "react-router-dom"
 import '../assets/css/final.css'
 import Parabens from '../assets/img/parabens.png'
+import Saiu from '../assets/img/saiu.png'
 
-export default function Final(){
+export default function Final({IsGameOver}){
     const navigate = useNavigate();
 
     const jogar = () => {        
@@ -20,7 +21,7 @@ export default function Final(){
             </div>
             <div className="bgAll">
                 <div className="popUp">
-                    <img src={Parabens}/>
+                    <img src={IsGameOver ? Saiu : Parabens}/>
                     <p className="p-btn">
                         <button onClick={finalizar} className="btn btn-finalizar">FINALIZAR</button>
                         <button onClick={jogar} className="btn btn-jogar">JOGAR NOVAMENTE</button>
