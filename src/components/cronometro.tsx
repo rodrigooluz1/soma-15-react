@@ -1,7 +1,7 @@
 import '../assets/css/cronometro.css'
 import React from 'react'
 
-export const Cronometro = ({paraCronometro, limite, statusTimeIsOver})=>{
+export const Cronometro = ({paraCronometro, limite, statusTimeIsOver} : {paraCronometro: boolean; limite: number; statusTimeIsOver:any})=>{
 
     const [segundos, setSegundos] = React.useState(0)
     const [minutos, setMinutos] = React.useState(0)

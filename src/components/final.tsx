@@ -1,10 +1,10 @@
 
-import { Navigate, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import '../assets/css/final.css'
 import Parabens from '../assets/img/parabens.png'
 import Saiu from '../assets/img/saiu.png'
 
-export default function Final({IsGameOver}){
+export default function Final({IsGameOver} : {IsGameOver: boolean}){
     const navigate = useNavigate();
 
     const jogar = () => {        

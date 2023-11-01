@@ -1,8 +1,8 @@
-
 import { useState, useEffect } from 'react';
 import '../assets/css/quadrado-soma.css'
 import { Cronometro } from './cronometro'
 import Final from './final';
+import { ItemTable } from '../type/item-table';
 
 export function QuadradoSoma(){
 
@@ -29,8 +29,8 @@ export function QuadradoSoma(){
         {id: 8, value: 8, order: 8, selected: false},
         {id: 9, value: 9, order: 9, selected: false},];
 
-    const [listaNumeros, setListaNumeros] = useState(numeros);      
-    
+    const [listaNumeros, setListaNumeros] = useState(numeros);  
+      
 
     useEffect(() => {        
         verificaSoma();
@@ -41,7 +41,7 @@ export function QuadradoSoma(){
         setEncerrarJogo(true);
     }
     
-    const selecionaNumero = (item, indice) => {
+    const selecionaNumero = ({item, indice} : {item:ItemTable; indice:number}) => {
         
         item.selected = true         
 
@@ -130,7 +130,7 @@ export function QuadradoSoma(){
 
                 {listaNumeros.sort((a, b) => a.order > b.order ? 1 : -1).map((item, index) => {
                     return(                    
-                        <div className={item.selected ? 'itemNumero selected' : 'itemNumero'} key={index} onClick={() => selecionaNumero(item)}>{item.value}</div> 
+                        <div className={item.selected ? 'itemNumero selected' : 'itemNumero'} key={index} onClick={() => selecionaNumero({item, indice: index})}>{item.value}</div> 
                     );
                 })}
             </div>  
