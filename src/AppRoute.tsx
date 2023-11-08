@@ -11,8 +11,8 @@ export default function AppRoutes(){
     return(
         <Router>
             <Routes>
-                <Route path='/soma-15-react/' element={<Inicio/>} />
-                <Route path='/soma-15-react/QuadradoSoma' element={<QuadradoSoma />} />
+                <Route path='/' element={<Inicio/>} />
+                <Route path='/QuadradoSoma' element={<QuadradoSoma />} />
             </Routes>
         </Router>
     )
